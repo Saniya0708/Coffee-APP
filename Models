@@ -1,0 +1,19 @@
+models.py
+from django.db import models
+from django.utils import timezone 
+
+# Create your models here.
+class CoffeeVarity(models.Model):
+    COFFEE_TYPE_CHOICE =[
+        ('AM', 'Americano'),
+        ('CU', 'Cappuccino'),
+        ('LA', 'Latte'),
+        ('ES', 'Espresso'),
+        ('MO', 'Mocha'),
+        ('IR', 'Irish coffee'),
+        ('FR', 'Frappe'),
+    ]
+    name =models.CharField(max_length=100)
+    image =models.ImageField(upload_to='coffee_images/')
+    data_added = models.DateTimeField(default=timezone.now)
+    type = models.CharField(max_length=2, choices=COFFEE_TYPE_CHOICE) 
