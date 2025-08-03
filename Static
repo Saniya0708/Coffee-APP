@@ -1,0 +1,14 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #e8a9a9;
+}
+
+form {
+    margin-bottom: 30px;
+}
+
+img {
+    margin-top: 10px;
+    border-radius: 8px;
+}
