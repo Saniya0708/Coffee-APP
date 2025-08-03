@@ -1,0 +1,36 @@
+1. index.html
+{% load static %}
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viweport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee App</title> 
+    <link rel ="stylesheet" href="{% static "style.css" %}">
+</head>
+<body>
+    {% block content %}{% endblock %}
+</body>
+</html> 
+
+{% extends 'layout.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+    <h1>This is our main page</h1>
+{% endblock %}
+
+2. layout.html
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}Coffee App{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    {% block content %}{% endblock %}
+</body>
+</html>
+
